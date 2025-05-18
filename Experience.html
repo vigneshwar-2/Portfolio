@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience Section</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    .experience-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .experience-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .experience-box:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .experience-box:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .experience-box:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .job-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .job-date {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .job-description {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="experience-container">
+    <!-- Experience 1 -->
+    <div class="experience-box">
+      <div class="job-title">Web Master - IEEE And WIE Student Branch</div>
+      <div class="job-date">JUN 2024 - Present</div>
+      <div class="job-description">
+        Managing and maintaining the official IEEE and WIE student branch websites using WordPress.<br/>
+        Regularly update content, event details, and member profiles to ensure a dynamic and engaging web presence.<br/>
+        Coordinated with event teams to publish announcements and post-event recaps.<br/>
+        Implemented design updates to improve UX and site responsiveness across devices.
+      </div>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="experience-box">
+      <div class="job-title">HR Marketing Intern - Edlernity</div>
+      <div class="job-date">AUG 2024 - SEPT 2024</div>
+      <div class="job-description">
+        Assisted in planning and executing recruitment marketing strategies to attract potential candidates.<br/>
+        Collaborated with the HR team to promote company culture and engage talent through digital outreach.<br/>
+        Gained hands-on experience in HR communications, candidate engagement, and branding initiatives.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

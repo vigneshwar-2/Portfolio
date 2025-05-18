@@ -1,0 +1,180 @@
+/* Vibrant and animated gradient background */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.content {
+  padding: 4rem 3rem;
+  max-width: 720px;
+  margin: 8% auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  color: #f5f2f2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f4f3f3;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ececec;
+}
+
+/* Hidden-style link with animated "blow up" on hover */
+.hidden-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  background: #ffffff10;
+  color: #ffffffcc;
+  border-radius: 50px;
+  border: 2px solid #ffffff33;
+  transition: all 0.4s ease;
+  transform: scale(0.9);
+}
+
+.hidden-link:hover,
+.hidden-link:active {
+  background: #ffffffaa;
+  color: #000;
+  transform: scale(1.2);
+  box-shadow: 0 0 30px #ffffff66;
+}
+
+/* Mobile view section styles */
+#mobile-view {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content {
+    margin: 5% 1rem;
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #mobile-view {
+    font-size: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul.nav-links li {
+    margin: 10px 0;
+  }
+
+  nav ul.social-links {
+    justify-content: flex-start;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Navigation immersive button styles and alignment */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul.nav-links {
+  justify-content: flex-start;
+}
+
+nav ul.social-links {
+  justify-content: flex-start;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(255, 110, 196, 0.6);
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: linear-gradient(135deg, #4ade80, #facc15);
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.8);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* Animate icons */
+nav ul li a i {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* General setup */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul.nav-links {
+      justify-content: flex-start;
+    }
+
+    nav ul li a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.2rem;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(255, 110, 196, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: linear-gradient(135deg, #4ade80, #facc15);
+      box-shadow: 0 6px 20px rgba(74, 222, 128, 0.8);
+      color: rgb(255, 249, 249);
+      transform: scale(1.05);
+    }
+
+    nav ul li a i {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .content {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 10% auto 2rem auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 25px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 30px rgba(255,255,255,0.2);
+      color: #fdf7f7;
+    }
+
+    .intro-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+
+    .intro-box h2 {
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    .intro-box p {
+      font-size: 1.1rem;
+      color: #fff7f7;
+      line-height: 1.6;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .social-buttons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      color: white;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(255, 110, 196, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .social-buttons a:hover {
+      background: linear-gradient(135deg, #4ade80, #facc15);
+      box-shadow: 0 6px 20px rgba(74, 222, 128, 0.8);
+      color: black;
+      transform: scale(1.05);
+    }
+
+    .social-buttons a i {
+      animation: bounce 2s infinite;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        margin: 5% 1rem;
+        padding: 2rem 1rem;
+        max-width: 100%;
+      }
+
+      nav ul.nav-links {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-background"></div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="About.html">About</a></li>
+      <li><a href="Experience.html">Experience</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div class="intro-box">
+      <h2>Hello, I'm a Passionate Developer 👋</h2>
+      <p>
+        I'm a <strong>Web Developer</strong> and <strong>Game Developer</strong> specializing in <strong>Frontend</strong> and <strong>UI/UX Design</strong>. <br>
+        I also build dynamic websites as a proficient <strong>WordPress Developer</strong>. <br>
+        My passion is crafting immersive and interactive digital experiences.
+      </p>
+    </div>
+
+    <div class="social-buttons">
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a>
+    </div>
+  </div>
+</body>
+</html>

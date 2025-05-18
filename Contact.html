@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="animated-background"></div>
+
+  <div class="contact-form">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/vigneshwarvicky248@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+      <textarea name="message" placeholder="Write your message..." required></textarea>
+      <!-- Prevent bot spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
